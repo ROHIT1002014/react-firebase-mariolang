@@ -1,13 +1,13 @@
 import React from 'react';
-const ProjectSummary = () => {
+const ProjectSummary = ({project}) => {
   return(
     <div className="card z-depth-0 project-summary">
       <div className="card-content">
         <span className="card-title">
-          Project Title
+          {project.title}
         </span>
         <p>
-          Posted by Rohit Kumar Verma
+          {project.content}
         </p>
         <p className="grey-text">
           6th aug, 7pm
