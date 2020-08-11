@@ -8,7 +8,7 @@ import rootReducer from './store/reducers/rootReducer';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { getFirebase, ReactReduxFirebaseProvider } from 'react-redux-firebase';
-import { reduxFirestore, getFirestore } from 'redux-firestore';
+import { reduxFirestore, getFirestore, createFirestoreInstance } from 'redux-firestore';
 import fbConfig from './config/fbConfig';
 import firebase from 'firebase/app';
 
@@ -23,7 +23,8 @@ const store = createStore(
 const rrfProps = {
   firebase,
   config: fbConfig,
-  dispatch: store.dispatch
+  dispatch: store.dispatch,
+  createFirestoreInstance
 }
 
 ReactDOM.render(
